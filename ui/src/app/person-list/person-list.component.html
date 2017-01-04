@@ -1,0 +1,9 @@
+<h3>List of Persons</h3>
+
+<label>New Person name: <input #newPersonName /></label>
+<button (click)="addPerson(newPersonName.value); newPersonName.value=''">Add Hero</button>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+
+<ul>
+  <li *ngFor="let person of persons">{{person.name}}</li>
+</ul>
